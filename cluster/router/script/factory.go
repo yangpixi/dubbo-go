@@ -20,6 +20,8 @@ package script
 import (
 	"dubbo.apache.org/dubbo-go/v3/cluster/router"
 	"dubbo.apache.org/dubbo-go/v3/common"
+	"dubbo.apache.org/dubbo-go/v3/common/constant"
+	"dubbo.apache.org/dubbo-go/v3/common/extension"
 )
 
 func init() {
@@ -29,7 +31,7 @@ func init() {
 		User can import this package and config config center to use Script router.
 	*/
 	// TODO(finalt) Temporarily removed until fixed (https://github.com/apache/dubbo-go/pull/2716)
-	//extension.SetRouterFactory(constant.ScriptRouterFactoryKey, NewScriptRouterFactory)
+	extension.SetRouterFactory(constant.ScriptRouterFactoryKey, NewScriptRouterFactory)
 }
 
 // ScriptRouteFactory router factory
