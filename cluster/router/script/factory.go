@@ -30,7 +30,6 @@ func init() {
 		and cause warning if config center is empty.
 		User can import this package and config config center to use Script router.
 	*/
-	// TODO(finalt) Temporarily removed until fixed (https://github.com/apache/dubbo-go/pull/2716)
 	extension.SetRouterFactory(constant.ScriptRouterFactoryKey, NewScriptRouterFactory)
 }
 
